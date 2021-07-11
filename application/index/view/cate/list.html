@@ -1,0 +1,107 @@
+{include file="common/header"}
+
+<!--导航条-->
+<nav class="breadcrumb">
+    <div class="container">
+        <i class="Hui-iconfont">&#xe67f;</i><a href="/" class="c-primary">首页</a>
+        <span class="c-gray en">&gt;</span> <a href="#" class="c-primary">{$cates.id}</a>
+    </div>
+</nav>
+
+<section class="container">
+  <!--left-->
+  <div class="col-sm-9 col-md-9 mt-20">
+  	
+  		
+  	<!--article list-->
+			{volist name="list" id="vo"}
+			{if condition="$vo['state'] eq 1"}
+			<ul class="index_arc">
+				<li class="index_arc_item">
+					<a href="{:url('/index/article/index',array('arid'=>$vo['id']))}" class="pic">
+						<img class="lazyload" src="__PUBLIC__/temp/gaoyi.png" alt="应该选" />
+					</a>
+					<h4 class="title"><a href="{:url('/index/article/index',array('arid'=>$vo['id']))}">{$vo.title}</a></h4>
+					<div class="date_hits">
+						<span>{$vo.author}</span>
+						<span>{$vo.time|date="Y-m-d",###}</span>
+						<span><a href="/article-lists/10.html">{$vo.catename}</a></span>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
+						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span class="cy_cmt_count">20</span></p>
+					</div>
+					<div class="desc">不论搭建什么样的网站，选择一个好的域名都是很有必要的，选择一个好的域名对网站的意义也是不言而喻的。每一个网站都有之对应的域名，就像人的名字一样。每个人都想自己有个好听的名字，网站也是一样。一个网站可以有多个域名，但是一个域名只能对应一个网站。&nbsp;一、域名要好记，方便输入&nbsp; &nbsp; &nbsp; &nbsp;域名本身的意义就是为了人们方便记忆才使用的，不然都用IP地址就好了。所以，网站域名一定要选择好记忆的。因为域名是</div>
+				</li>
+				{/if}
+          		{/volist}
+				</ul>
+  		<div class="text-c mb-20" id="moreBlog">
+            <a class="btn  radius btn-block " href="javascript:;" onclick="moreBlog('${blogType.id}','${tag.name}');">点击加载更多</a>
+            <a class="btn  radius btn-block hidden" href="javascript:;">加载中……</a>
+        </div>		
+  </div>
+  
+  <!--right-->
+  <div class="col-sm-3 col-md-3 mt-20">
+  	
+  	<!--导航-->
+  	<div class="panel panel-primary mb-20">
+			<div class="panel-body">
+				{if condition="$cates['id'] eq '7'"}
+				<input class="btn btn-primary radius nav-btn" type="button" value="高一学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高二学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高三学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="平台公告">
+				{/if}
+				{if condition="$cates['id'] eq '8'"}
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高一学年">
+				<input class="btn btn-primary radius nav-btn" type="button" value="高二学年">			
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高三学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="平台公告">
+				{/if}
+				{if condition="$cates['id'] eq '9'"}
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高一学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高二学年">
+				<input class="btn btn-primary radius nav-btn" type="button" value="高三学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="平台公告">
+				{/if}
+				{if condition="$cates['id'] eq '10'"}
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高一学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高二学年">
+				<input class="btn btn-primary-outline radius nav-btn" type="button" value="高三学年">
+				<input class="btn btn-primary radius nav-btn" type="button" value="平台公告">
+				{/if}
+			</div>
+		</div>
+  	
+  	<!--热门推荐-->
+
+	
+<!--标签-->
+		
+  </div>
+  
+</section>
+{include file="common/footer"}
+
+<script type="text/javascript" src="plugin/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="plugin/layer/3.0/layer.js"></script>
+<script type="text/javascript" src="plugin/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="plugin/pifu/pifu.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script> $(function(){ $(window).on("scroll",backToTopFun); backToTopFun(); }); </script>
+<script>
+$(function(){
+//标签
+	$(".tags a").each(function(){
+		var x = 9;
+		var y = 0;
+		var rand = parseInt(Math.random() * (x - y + 1) + y);
+		$(this).addClass("tags"+rand)
+	});
+	
+	$("img.lazyload").lazyload({failurelimit : 3});
+});
+
+</script> 
+</body>
+</html>
