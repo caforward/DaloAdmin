@@ -11,7 +11,11 @@ V1.0后台系统主要功能 管理员设置 栏目管理 友情链接管理 文
  + 后端框架页面自适应显示
  + 文章新建与编辑采用了百度UEditor编辑器
 
-> ThinkPHP5的运行环境要求PHP5.4以上。
+> DaloAdmin的运行环境要求: PHP7.0 Mysql Apache
+>
+> **网站访问路径为:/public**
+>
+> 网站前台页面:/index 网站后台管理:/admin
 
 项目案例： [哈尔滨德强高中作业答案发布平台](http://dqxx.ahgou.top)
 
