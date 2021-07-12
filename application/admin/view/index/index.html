@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>童老师ThinkPHP交流群：484519446</title>
+    <title>管理中心-德强学校作业发布平台</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,16 +56,16 @@
                                             <div class="databox-row row-12">
                                                 <div class="databox-row row-6 no-padding">
                                                     <div class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum">
-                                                        <span class="databox-text sonic-silver  no-margin">Posts</span>
-                                                        <span class="databox-number lightcarbon no-margin">510</span>
+                                                        <span class="databox-text sonic-silver  no-margin"><a href="{:url('/admin/article/lst')}">文章管理</a></span>
+                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('/admin/article/lst')}">文章管理</a></span>
                                                     </div>
                                                     <div class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum">
-                                                        <span class="databox-text sonic-silver no-margin">Followers</span>
-                                                        <span class="databox-number lightcarbon no-margin">908</span>
+                                                        <span class="databox-text sonic-silver no-margin"><a href="{:url('admin/cate/lst')}">栏目管理</a></span>
+                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('/admin/cate/lst')}">栏目管理</a></span>
                                                     </div>
                                                     <div class="databox-cell cell-4 no-padding text-align-center">
-                                                        <span class="databox-text sonic-silver no-margin">Following</span>
-                                                        <span class="databox-number lightcarbon no-margin">286</span>
+                                                        <span class="databox-text sonic-silver no-margin"><a href="{:url('admin/links/lst')}">友情链接</a></span>
+                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('admin/links/lst')}">友情链接</a></span>
                                                     </div>
                                                 </div>
                                                 <div class="databox-row row-6 padding-10">
@@ -73,8 +73,23 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="col-lg-6 col-sm-6 col-xs-12">
+                                    <div class="well with-header">
+                                        <div class="header bordered-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快捷入口</font></font></div>
+                                        <div class="buttons-preview">
+                                            <button class="btn btn-success" data-toggle="modal" data-target="#modal-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('/admin/article/lst')}">文章管理</a></font></font></button>
+                                            <button class="btn btn-info" data-toggle="modal" data-target="#modal-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/cate/lst')}">栏目管理</a></font></font></button>
+                                            <button class="btn btn-danger" data-toggle="modal" data-target="#modal-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/links/lst')}">友情链接</a></font></font></button>
+                                            <button class="btn btn-warning" data-toggle="modal" data-target="#modal-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/admin/lst')}">管理员表</a></font></font></button>
+                                        </div>
                                     </div>
                                 </div>
+                                
+                               
+                                
                                 <div class="col-lg-6 col-sm-6 col-xs-12">
                                     <div class="widget">
                                         <div class="widget-header bg-blue">
@@ -96,20 +111,16 @@
                                             </div><!--Widget Buttons-->
                                         </div><!--Widget Header-->
                                         <div class="widget-body">
+                                            <p>使用方法：<br>新建文章->选择发布栏目->定时/手动发布文章->完成</p>
                                             <p>使用环境：PHP7.0 Mysql5.6 Apache推荐宝塔面板</p>
                                             <p>设置访问路径为：/public</p> 
-                                            <p>使用方法：<br>新建文章->选择发布栏目->定时/手动发布文章->完成</p>
+                                             <code>Author:28Caojian Email：1411060@qq.com</code>
+                                            <p>将持续修复bug 优化功能 功能问题请邮箱联系我</p>
                                             <p>本系统采用了DaloAdminV1.0后端框架开发！<br/> DaloAdmin框架秉承安全 实用 高效 自动化设计理念</p>
                                         </div><!--Widget Body-->
                                     </div><!--Widget-->
                                 </div>
-                            <div class="col-lg-6 col-sm-6 col-xs-12">
-                                    <div class="well with-header">
-                                        <div class="header bordered-magenta"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快捷入口</font></font></div>
-                                        <a href="/">123123</a>
-                                    </div>
 
-                                </div>
 				
                 </div>
                 
@@ -118,8 +129,11 @@
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
+            <footer>
+		    <p>Powered By DaLoAdminV1.0</p>
+		</footer>
 		</div>	
-	</div>
+		
 
 	    <!--Basic Scripts-->
     <script src="__PUBLIC__/style/jquery_002.js"></script>

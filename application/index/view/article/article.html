@@ -1,4 +1,5 @@
 {include file="common/header"}
+<title>{$articleres.title}-德强高中作业网</title>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/plugin/h-ui/css/H-ui.min.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/common.css" />
@@ -7,7 +8,7 @@
 
 <!--导航条-->
 <nav class="breadcrumb">
-  <div class="container"> <i class="Hui-iconfont">&#xe67f;</i> <a href="index.html" class="c-primary">首页</a> <span class="c-gray en">&gt;</span>  <span class="c-gray">{$articleres.cateid}</span> <span class="c-gray en">&gt;</span>  <span class="c-gray">{$articleres.title}</span></div>
+  <div class="container"> <i class="Hui-iconfont">&#xe67f;</i> <a href="/" class="c-primary">首页</a> <span class="c-gray en">&gt;</span>  <span class="c-gray">{$articleres.cateid}</span> <span class="c-gray en">&gt;</span>  <span class="c-gray">{$articleres.title}</span></div>
 </nav>
 
 <section class="container pt-20">
@@ -32,10 +33,7 @@
                             
                             
                             
-                            <div class="nextinfo">
-                                <p class="last">上一篇：<a href="#">免费收录网站搜索引擎登录口大全</a></p>
-                                <p class="next">下一篇：<a href="#">javascript显示年月日时间代码</a></p>
-                            </div>
+
                             
                         </div>
                     </div>
@@ -59,13 +57,13 @@
     
 </section>
 {include file="common/footer"}
-<script type="text/javascript" src="plugin/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="plugin/layer/3.0/layer.js"></script>
-<script type="text/javascript" src="plugin/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="plugin/pifu/pifu.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugin/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugin/layer/3.0/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugin/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugin/pifu/pifu.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
 <script> $(function(){ $(window).on("scroll",backToTopFun); backToTopFun(); }); </script>
-<script type="text/javascript" src="plugin/wangEditor/js/wangEditor.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugin/wangEditor/js/wangEditor.min.js"></script>
 <script type="text/javascript">
     $(function () {
             $("img.lazyload").lazyload({failurelimit : 3});

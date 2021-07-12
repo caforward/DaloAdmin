@@ -15,11 +15,11 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'tpblog',
+    'database'        => 'dqxx_ahgou_top',
     // 用户名
-    'username'        => 'root',
+    'username'        => 'dqxx_ahgou_top',
     // 密码
-    'password'        => '220220',
+    'password'        => 'XayKR486fDLtAKaX',
     // 端口
     'hostport'        => '3306',
     // 连接dsn

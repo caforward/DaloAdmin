@@ -3,7 +3,7 @@
         <div class="navbar-container">
             <!-- Navbar Barnd -->
             <div class="navbar-header pull-left">
-                <a href="#" class="navbar-brand">
+                <a href="/admin" class="navbar-brand">
                     <small>
                             <img src="__PUBLIC__/images/logo.png" alt="">
                         </small>
@@ -20,13 +20,6 @@
                 <div class="navbar-account">
                     <ul class="account-area">
                         <li>
-
-                            <a class="login-area dropdown-toggle" >
-                                <section>
-                                    <h2><span ><span>TPCfanAdmin框架V1.0.0</span></span></h2>
-                                </section>
-                            </a>
-
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
                                 <div class="avatar" title="View your public profile">
                                     <img src="__PUBLIC__/images/adam-jansen.jpg">
@@ -37,7 +30,7 @@
                             </a>
                             <!--Login Area Dropdown-->
                             <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-                                <li class="username"><a>David Stevenson</a></li>
+                                <li class="username"><a>{$Request.session.username}</a></li>
                                 <li class="dropdown-footer">
                                     <a href="{:url('admin/logout')}">
                                             退出登录
