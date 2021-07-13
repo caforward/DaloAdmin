@@ -11,7 +11,7 @@
  Target Server Version : 50553
  File Encoding         : 65001
 
- Date: 02/07/2021 02:31:17
+ Date: 14/07/2021 01:45:56
 */
 
 SET NAMES utf8mb4;
@@ -52,16 +52,17 @@ CREATE TABLE `tp_article`  (
   `state` tinyint(1) NULL DEFAULT 0 COMMENT '0为推荐 1为不推荐',
   `time` int(11) NULL DEFAULT NULL COMMENT '发布时间',
   `cateid` mediumint(9) NULL DEFAULT NULL,
+  `stime` date NULL DEFAULT '2030-08-14' COMMENT '定时发布时间',
+  `sstate` int(255) NULL DEFAULT NULL COMMENT '定时发布状态',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tp_article
 -- ----------------------------
-INSERT INTO `tp_article` VALUES (7, '【高一学年】7月15日假期作业答案', 'admin', '', '【高一学年】', '<p style=\"line-height: 16px;\">【高一学年】7月15日假期作业答案：</p><p style=\"line-height: 16px;\">语文作业：</p><p style=\"line-height: 16px;\"><img style=\"vertical-align: middle; margin-right: 2px;\" src=\"http://www.tp5.com/static/admin/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif\"/><a style=\"font-size:12px; color:#0066cc;\" href=\"/ueditor/php/upload/file/20210701/1625069187.zip\" title=\"人物走动.zip\">人物走动.zip</a></p><p><img src=\"/ueditor/php/upload/image/20210701/1625075015.png\" title=\"1625075015.png\" alt=\"WeChat Screenshot_20210621014111.png\" width=\"545\" height=\"305\" style=\"width: 545px; height: 305px;\"/></p>', NULL, 0, 1, 1625069189, 7);
-INSERT INTO `tp_article` VALUES (6, '德强高中作业发布平台测试文章', 'admin', '1', '1', '<p>123123</p><p style=\"line-height: 16px;\"><img style=\"vertical-align: middle; margin-right: 2px;\" src=\"http://www.tp5.com/static/admin/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif\"/><a style=\"font-size:12px; color:#0066cc;\" href=\"/ueditor/php/upload/file/20210630/1625065970.jpg\" title=\"download.jpg\">download.jpg</a></p><p><br/></p>', NULL, 0, 1, 1625065972, 7);
-INSERT INTO `tp_article` VALUES (8, '超凡技术网123', 'admin', '123123', '123', '<p>123</p>', NULL, 0, 1, 1625153996, 8);
-INSERT INTO `tp_article` VALUES (9, '123', 'admin', '123', '213', '<p>123</p>', NULL, 0, 1, 1625154014, 7);
+INSERT INTO `tp_article` VALUES (7, '【高一学年】7月15日假期作业答案', 'admin', '', '【高一学年】', '<p style=\"line-height: 16px;\">【高一学年】7月15日假期作业答案：</p><p style=\"line-height: 16px;\">语文作业：</p><p style=\"line-height: 16px;\"><img style=\"vertical-align: middle; margin-right: 2px;\" src=\"http://www.tp5.com/static/admin/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif\"/><a style=\"font-size:12px; color:#0066cc;\" href=\"/ueditor/php/upload/file/20210701/1625069187.zip\" title=\"人物走动.zip\">人物走动.zip</a></p><p><img src=\"/ueditor/php/upload/image/20210701/1625075015.png\" title=\"1625075015.png\" alt=\"WeChat Screenshot_20210621014111.png\" width=\"545\" height=\"305\" style=\"width: 545px; height: 305px;\"/></p>', NULL, 0, 1, 1625069189, 7, '0000-00-00', NULL);
+INSERT INTO `tp_article` VALUES (12, '7.13应该成功定时发布', 'admin', '123', '132', '<p>1231231</p>', NULL, 0, 1, 1626196671, 7, '2021-07-13', NULL);
+INSERT INTO `tp_article` VALUES (13, '7.15应该还没有发布', 'admin', '1231', '123', '<p>123123</p>', NULL, 0, 1, 1626196697, 7, '2021-07-14', NULL);
 
 -- ----------------------------
 -- Table structure for tp_cate
