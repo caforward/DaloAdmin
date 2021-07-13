@@ -58,7 +58,7 @@
                                 <th class="text-center" width="4%">ID</th>
                                 <th class="text-center">文章标题</th>
                                 <th class="text-center" width="4%">作者</th>
-                                <th class="text-center" width="8%">时间</th>
+                                <th class="text-center" width="8%">定时发布时间</th>
                                  <th class="text-center" width="4%">状态</th>
                                  <!-- <th class="text-center">缩略图</th> -->
                                  <!-- 是否发布功能 Ajax 正在开发中 -->
@@ -74,7 +74,13 @@
                                 <td align="center">{$vo.id}</td>
                                 <td align="center"><a href="{:url('index/article/index',array('arid'=>$vo['id']))}">{$vo.title}</a></td>
                                 <td align="center">{$vo.author}</td>
-                                <td align="center">{$vo.time|date="Y-m-d",###}</td>
+                                <td align="center">
+                                    {if condition="$vo['stime'] eq 0000-00-00 "}
+                                    <span style="color:red;">(警告)未设置时间</span>
+                                    {else /}
+                                    <span style="color:green;">{$vo.stime}</span>
+                                    {/if}
+                                    </td>
                                 <td align="center">
                                     {if condition="$vo['state'] eq 1"}
                                     <span style="color:green;">已发布</span>

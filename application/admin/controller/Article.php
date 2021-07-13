@@ -6,21 +6,12 @@ use think\Loader;
 use app\admin\model\Article as ArticleModel;
 class Article extends Base 
 {
-    // 文章一键发布功能
-    // public function fabu()
-    // {   
-    //    $id=input('id');
-    //     $fabus=db('Article')->find($id);
-    //    $data=[
-    //         'state'=>0,
-    //     ];
-    //    $states=db('Article')->where('id',$id)->value('state');
-    //     if(db('Article')->update($data)){
-    //         $this->success('发布状态修改成功！','lst');
-    //     }else{
-    //         $this->error('发布状态修改失败！');
-    //     }
-    // }
+    //文章一键发布功能
+    public function fabu()
+    {   
+        $pub=db('article')->whereTime('stime', '<=', 'today')->update(['state' => '1']);
+        dump($pub);
+    }
     //admin管理类表
 	public function lst()
     {   
@@ -42,6 +33,8 @@ class Article extends Base
                 'cateid'=>input('cateid'),
                 'content'=>input('content'),
                 'time'=>time(),
+                'stime'=>input('stime'),
+                'sstate'=>input('sstate'),
             ];
             //如果为on则为1，是否为置顶
             if(input('state')=='on'){
@@ -93,6 +86,8 @@ class Article extends Base
                 'keywords'=>input('keywords'),
                 'content'=>input('content'),
                 'cateid'=>input('cateid'),
+                'stime'=>input('stime'),
+                'sstate'=>input('sstate'),
             ];
             //状态state修改edit
             if(input('state')=='on'){
