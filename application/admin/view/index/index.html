@@ -57,15 +57,15 @@
                                                 <div class="databox-row row-6 no-padding">
                                                     <div class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum">
                                                         <span class="databox-text sonic-silver  no-margin"><a href="{:url('/admin/article/lst')}">文章管理</a></span>
-                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('/admin/article/lst')}">文章管理</a></span>
+                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('/admin/article/lst')}">{$artc}</a></span>
                                                     </div>
                                                     <div class="databox-cell cell-4 no-padding text-align-center bordered-right bordered-platinum">
                                                         <span class="databox-text sonic-silver no-margin"><a href="{:url('admin/cate/lst')}">栏目管理</a></span>
-                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('/admin/cate/lst')}">栏目管理</a></span>
+                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('/admin/cate/lst')}">{$catec}</a></span>
                                                     </div>
                                                     <div class="databox-cell cell-4 no-padding text-align-center">
-                                                        <span class="databox-text sonic-silver no-margin"><a href="{:url('admin/links/lst')}">友情链接</a></span>
-                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('admin/links/lst')}">友情链接</a></span>
+                                                        <span class="databox-text sonic-silver no-margin"><a href="{:url('admin/admin/lst')}">管理员表</a></span>
+                                                        <span class="databox-number lightcarbon no-margin"><a href="{:url('admin/admin/lst')}">{$adminc}</a></span>
                                                     </div>
                                                 </div>
                                                 <div class="databox-row row-6 padding-10">
@@ -76,17 +76,51 @@
                                         </div>
                                 </div>
                                 
-                                <div class="col-lg-6 col-sm-6 col-xs-12">
-                                    <div class="well with-header">
-                                        <div class="header bordered-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快捷入口</font></font></div>
-                                        <div class="buttons-preview">
-                                            <button class="btn btn-success" data-toggle="modal" data-target="#modal-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('/admin/article/lst')}">文章管理</a></font></font></button>
-                                            <button class="btn btn-info" data-toggle="modal" data-target="#modal-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/cate/lst')}">栏目管理</a></font></font></button>
-                                            <button class="btn btn-danger" data-toggle="modal" data-target="#modal-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/links/lst')}">友情链接</a></font></font></button>
-                                            <button class="btn btn-warning" data-toggle="modal" data-target="#modal-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/admin/lst')}">管理员表</a></font></font></button>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="databox radius-bordered databox-shadowed databox-graded">
+                                        <div class="databox-left bg-themesecondary">
+                                            <div class="databox-piechart">
+                                                <div data-toggle="easypiechart" class="easyPieChart" data-barcolor="#fff" data-linecap="butt" data-percent="{$dfb/$yfb}" data-animate="500" data-linewidth="3" data-size="47" data-trackcolor="rgba(255,255,255,0.1)" style="width: 47px; height: 47px; line-height: 47px;"><span class="white font-90">{$dfb/($yfb+$dfb)*100|intval}%</span><canvas width="47" height="47"></canvas></div>
+                                            </div>
+                                        </div>
+                                        <div class="databox-right">
+                                            <span class="databox-number themesecondary">{$dfb}</span>
+                                            <div class="databox-text darkgray">待发布文章</div>
+                                            <div class="databox-stat themesecondary radius-bordered">
+                                                <i class="stat-icon icon-lg fa fa-tasks"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="databox radius-bordered databox-shadowed databox-graded">
+                                        <div class="databox-left bg-themesecondary">
+                                            <div class="databox-piechart">
+                                                <div data-toggle="easypiechart" class="easyPieChart" data-barcolor="#fff" data-linecap="butt" data-percent="{$dfb/$yfb}" data-animate="500" data-linewidth="3" data-size="47" data-trackcolor="rgba(255,255,255,0.1)" style="width: 47px; height: 47px; line-height: 47px;"><span class="white font-90">{$yfb/($yfb+$dfb)*100|intval}%</span><canvas width="47" height="47"></canvas></div>
+                                            </div>
+                                        </div>
+                                        <div class="databox-right">
+                                            <span class="databox-number themesecondary">{$yfb}</span>
+                                            <div class="databox-text darkgray">已发布文章</div>
+                                            <div class="databox-stat themesecondary radius-bordered">
+                                                <i class="stat-icon icon-lg fa fa-tasks"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!--<div class="col-lg-6 col-sm-6 col-xs-12">-->
+                                <!--    <div class="well with-header">-->
+                                <!--        <div class="header bordered-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快捷入口</font></font></div>-->
+                                <!--        <div class="buttons-preview">-->
+                                <!--            <button class="btn btn-success" data-toggle="modal" data-target="#modal-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('/admin/article/lst')}">文章管理</a></font></font></button>-->
+                                <!--            <button class="btn btn-info" data-toggle="modal" data-target="#modal-info"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/cate/lst')}">栏目管理</a></font></font></button>-->
+                                <!--            <button class="btn btn-danger" data-toggle="modal" data-target="#modal-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/links/lst')}">友情链接</a></font></font></button>-->
+                                <!--            <button class="btn btn-warning" data-toggle="modal" data-target="#modal-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{:url('admin/admin/lst')}">管理员表</a></font></font></button>-->
+                                <!--        </div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
                                 
                                
                                 
@@ -111,6 +145,7 @@
                                             </div><!--Widget Buttons-->
                                         </div><!--Widget Header-->
                                         <div class="widget-body">
+                                            <p style="color:red">警告：<br>新建和编辑文章必须设置定时发布时间！！ 还有 不要删除栏目！！</p>
                                             <p>使用方法：<br>新建文章->选择发布栏目->定时/手动发布文章->完成</p>
                                             <p>使用环境：PHP7.0 Mysql5.6 Apache推荐宝塔面板</p>
                                             <p>设置访问路径为：/public</p> 
@@ -129,9 +164,7 @@
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-            <footer>
-		    <p>Powered By DaLoAdminV1.0</p>
-		</footer>
+           
 		</div>	
 		
 

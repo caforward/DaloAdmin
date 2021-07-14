@@ -8,7 +8,7 @@
 
 <!--导航条-->
 <nav class="breadcrumb">
-  <div class="container"> <i class="Hui-iconfont">&#xe67f;</i> <a href="/" class="c-primary">首页</a> <span class="c-gray en">&gt;</span>  <span class="c-gray">{$articleres.cateid}</span> <span class="c-gray en">&gt;</span>  <span class="c-gray">{$articleres.title}</span></div>
+  <div class="container"> <i class="Hui-iconfont">&#xe67f;</i> <a href="/" class="c-primary">首页</a> <span class="c-gray en">&gt;</span>     <span class="c-gray">{$articleres.title}</span></div>
 </nav>
 
 <section class="container pt-20">
@@ -19,6 +19,7 @@
                 <div class="col-lg-9 col-md-9 w_main_left">
                     <div class="panel panel-default  mb-20">
                         <div class="panel-body pt-10 pb-10">
+                            {if condition="$articleres.state eq 1 "}
                             <h2 class="c_titile">{$articleres.title}</h2>
                             <p class="box_c"><span class="d_time">发布时间：{$articleres.time|date="Y-m-d",###}</span><span>编辑：<a href="#">{$articleres.author}</a></span><span>阅读（{$articleres.click}）</span></p>
                             <ul class="infos">
@@ -30,7 +31,9 @@
                             <div class="keybq">
                                 <p><span>关键字</span>：<a class="label label-default">{$articleres.keywords}</a></p>    
                             </div>
-                            
+                            {else /}
+                                    <span style="color:red;">作业还未发布！请等待发布后再访问！</span>
+                            {/if}
                             
                             
 
@@ -41,16 +44,7 @@
                 <div class="col-lg-3 col-md-3">
                     <!--热门推荐-->
     {include file="common/hot"}
-                        
-                    <!--图片-->
-      <!--   <div class="bg-fff box-shadow radius mb-20">
-            <div class="tab-category">
-                <a href=""><strong>扫我关注</strong></a>
-            </div>
-            <div class="tab-category-item">
-                <img data-original="temp/gg.jpg" class="img-responsive lazyload" alt="响应式图片">
-            </div>
-        </div> -->
+                          </div>
                     
                 </div>
             </div>

@@ -15,11 +15,11 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'dqxx_ahgou_top',
+    'database'        => 'gz_dqxx_com',
     // 用户名
-    'username'        => 'dqxx_ahgou_top',
+    'username'        => 'gz_dqxx_com',
     // 密码
-    'password'        => 'XayKR486fDLtAKaX',
+    'password'        => 'PncrfhwjxExt7rrC',
     // 端口
     'hostport'        => '3306',
     // 连接dsn
