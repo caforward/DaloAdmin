@@ -1,18 +1,18 @@
 {
-    "name": "topthink/think",
-    "description": "the new thinkphp framework",
+    "name": "cfan/daloadmin",
+    "description": "the daloadmin",
     "type": "project",
     "keywords": [
-        "framework",
+        "daloadmin",
         "thinkphp",
         "ORM"
     ],
-    "homepage": "http://thinkphp.cn/",
+    "homepage": "http://www.cf0w.com",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "liu21st",
-            "email": "liu21st@gmail.com"
+            "name": "cfan",
+            "email": "1411060@qq.com"
         }
     ],
     "require": {
@@ -23,9 +23,6 @@
         "psr-4": {
             "app\\": "application"
         }
-    },
-    "extra": {
-        "think-path": "thinkphp"
     },
     "config": {
         "preferred-install": "dist"
